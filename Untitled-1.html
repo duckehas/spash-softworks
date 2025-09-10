@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spash Softworks</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #111;
+      color: #eee;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* NAVBAR */
+    nav {
+      position: sticky;
+      top: 0;
+      background: #000;
+      border-bottom: 1px solid #222;
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
+    }
+
+    nav h1 {
+      font-size: 1.4rem;
+      color: #fff;
+      font-weight: 700;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #eee;
+      font-size: 1rem;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #bbb;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      text-align: center;
+      padding: 120px 20px;
+      background: linear-gradient(to right, #000, #111);
+      flex: 1; /* pushes footer down */
+    }
+
+    .hero h2 {
+      font-size: 2.8rem;
+      color: #fff;
+      margin-bottom: 15px;
+      font-weight: 700;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: #ccc;
+      max-width: 600px;
+      margin: 0 auto 25px;
+    }
+
+    .explore-btn {
+      padding: 14px 32px;
+      border: none;
+      border-radius: 6px;
+      background: #fff;
+      color: #000;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.3s ease;
+    }
+
+    .explore-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(255, 255, 255, 0.15);
+    }
+
+    /* INFO PANELS */
+    .info-section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      padding: 80px 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .panel {
+      background: #1a1a1a;
+      padding: 30px;
+      border-radius: 10px;
+      border: 1px solid #2a2a2a;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .panel:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+    }
+
+    .panel h3 {
+      font-size: 1.3rem;
+      margin-bottom: 12px;
+      color: #fff;
+    }
+
+    .panel p {
+      font-size: 1rem;
+      color: #ccc;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #888;
+      background: #000;
+      border-top: 1px solid #222;
+      margin-top: auto; /* stick footer to bottom */
+    }
+  </style>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav>
+    <h1>Spash Softworks</h1>
+    <ul>
+      <li><a href="Untitled-1.html">Home</a></li>
+      <li><a href="main home page.html">Store</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="faq.html">Faq</a></li>
+      <li><a href="bugs.html">Bugs</a></li>
+     <li><a href="Status.html"i>Status</a></li>
+
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h2>Welcome to Spash Softworks</h2>
+    <p>Professional software Creator for Roblox Apis.</p>
+<button class="explore-btn" onclick="window.location.href='main home page.html'">Explore Now</button>
+
+  </section>
+
+  <!-- INFO PANELS -->
+  <section class="info-section">
+    <div class="panel">
+      <h3>Our Mission</h3>
+      <p>Delivering efficient, modern, and secure software to empower professionals worldwide.</p>
+    </div>
+    <div class="panel">
+      <h3>Our Products</h3>
+      <p>here at spash softworks we make roblox apis for executors but only the best no need ot go threw a million ads just one click and your done.</p>
+    </div>
+    <div class="panel">
+      <h3>Our Vision</h3>
+      <p>Shaping the future of software with innovation, integrity, and customer focus.</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2025 Spash Softworks. All rights reserved.
+  </footer>
+</body>
+</html>

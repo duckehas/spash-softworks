@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Loading - Spash Softworks</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body, html {
+  width: 100%;
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  background: #111;
+  color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  flex-direction: column;
+  transition: background 0.5s ease;
+}
+.loader-container {
+  text-align: center;
+}
+.loader-bar {
+  width: 300px;
+  height: 12px;
+  background: #1a1a1a;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-top: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+.loader-fill {
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(90deg, #fff, #bbb);
+  border-radius: 6px;
+  transition: width 0.5s ease, background 0.5s ease;
+}
+.loader-text {
+  margin-top: 15px;
+  font-size: 1rem;
+  color: #ccc;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
+}
+.loader-dots span {
+  font-size: 1.5rem;
+  margin: 0 2px;
+  animation: pulse 1s infinite;
+  display: inline-block;
+}
+.loader-dots span:nth-child(2) { animation-delay: 0.2s; }
+.loader-dots span:nth-child(3) { animation-delay: 0.4s; }
+</style>
+</head>
+<body>
+
+<div class="loader-container">
+  <h2>Spash Softworks</h2>
+  <div class="loader-bar">
+    <div class="loader-fill" id="loaderFill"></div>
+  </div>
+  <div class="loader-text" id="loaderText">Loading<span class="loader-dots"><span>.</span><span>.</span><span>.</span></span></div>
+</div>
+
+<script>
+// Smooth loading simulation
+let progress = 0;
+const fill = document.getElementById('loaderFill');
+
+function easeOutQuad(t){ return t*(2-t); } // easing function
+
+function animateLoading() {
+  progress += 0.01; // increase progress
+  if(progress > 1) progress = 1;
+  
+  const easedProgress = easeOutQuad(progress);
+  fill.style.width = (easedProgress * 100) + '%';
+  
+  if(progress < 1){
+    requestAnimationFrame(animateLoading);
+  } else {
+    // smooth fade out
+    document.body.style.transition = 'opacity 0.8s ease';
+    document.body.style.opacity = '0';
+    setTimeout(()=>{ window.location.href = 'Untitled-1.html'; }, 800);
+  }
+}
+
+animateLoading();
+</script>
+
+</body>
+</html>
